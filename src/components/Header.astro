@@ -1,66 +1,73 @@
 ---
-import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE, SOCIAL_LINKS } from '../consts';
 const base = import.meta.env.BASE_URL;
 ---
 
 <header>
     <nav>
-        <h2><a href={base}>{SITE_TITLE}</a></h2>
-        <div class="internal-links">
-            <HeaderLink href={base}>Inicio</HeaderLink>
-            <HeaderLink href=`${base}/blog`>Posts</HeaderLink>
-            <HeaderLink href=`${base}/about`>Acerca de</HeaderLink>
-        </div>
-        <div class="social-links">
+        <ul>
+            <li><strong><a href={base}>{SITE_TITLE}</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href=`${base}`>Posts</a></li>
+            <li><a href=`${base}/about`>Acerca de</a></li>
+        </ul>
+        <ul>
             {SOCIAL_LINKS.map((link: any) => (
-            <a href={link.url} target="_blank">
-                <span class="sr-only">{link.description}</span>
-                <i class=`ri-${link.icon}-fill ri-xl`></i>
-            </a>
+            <li>
+                <a href={link.url} target="_blank">
+                    <span class="sr-only">{link.description}</span>
+                    <i class=`ri-${link.icon}-fill ri-xl`></i>
+                </a>
+            </li>
             ))}
-        </div>
+        </ul>
     </nav>
 </header>
+
 <style>
     header {
         margin: 0;
-        padding: 0 1em;
+        padding: 0 2rem;
         background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
-    }
-    h2 {
-        margin: 0;
-        font-size: 1em;
-    }
-
-    h2 a,
-    h2 a.active {
-        text-decoration: none;
+        border-bottom: solid 2px rgba(var(--gray), 20%);
     }
     nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-size: 1.1rem;
     }
     nav a {
-        padding: 1em 0.5em;
         color: var(--black);
-        border-bottom: 4px solid transparent;
         text-decoration: none;
     }
-    nav a.active {
-        text-decoration: none;
-        border-bottom-color: var(--accent);
-    }
-    .social-links,
-    .social-links a {
+    nav > ul {
         display: flex;
-        padding: 0 0.5em;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
     }
-    @media (max-width: 720px) {
-        .social-links {
-            display: none;
-        }
+    nav > ul:not(:first-child):not(:last-child) {
+        flex-grow: 1;
     }
+    nav > ul:not(:last-child) {
+        border-right: solid 2px rgba(var(--gray), 20%);
+    }
+    nav > ul > li {
+        display: flex;
+        margin: 1rem;
+    }
+    nav > ul:first-child li:first-child {
+        margin-left: 0;
+    }
+    nav > ul:last-child li:last-child {
+        margin-right: 0;
+    }
+    /*@media (max-width: 720px) {*/
+    /*    .social-links {*/
+    /*        display: none;*/
+    /*    }*/
+    /*}*/
 </style>
