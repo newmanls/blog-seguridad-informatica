@@ -6,36 +6,39 @@ const base = import.meta.env.BASE_URL;
 ---
 <li>
     <a href=`${base}/blog/${post.slug}/`>
-        <img width={720} height={360} src=`${base}/${post.data.heroImage}` alt="" />
-        <h4 class="title">{post.data.title}</h4>
-        <p class="date">
-        <FormattedDate date={post.data.pubDate} />
-        </p>
+        <div class="image">
+            <img src=`${base}/${post.data.heroImage}` alt="" />
+        </div>
+        <div class="body">
+            <h4 class="title">{post.data.title}</h4>
+            <p class="description">{post.data.description}</p>
+            <p class="author">Por {post.data.author}</p>
+            <p class="date"><FormattedDate class="date" date={post.data.pubDate} /></p>
+        </div>
     </a>
 </li>
 
 <style>
-    li {
-        width: calc(50% - 1rem);
+    li > a {
+        background: rgba(var(--gray-light));
+        padding: 1rem;
+        box-sizing: border-box;
+        color: inherit;
+        border: solid 1px rgba(var(--gray-light));
     }
     li * {
         text-decoration: none;
         transition: 0.2s ease;
     }
-    li:first-child {
+    .image {
         width: 100%;
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-    li:first-child img {
-        width: 100%;
-    }
-    li:first-child .title {
-        font-size: 2.369rem;
-    }
-    li img {
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: var(--radius);
         margin-bottom: 0.5rem;
-        border-radius: 12px;
+    }
+    .image > img {
+        height: 100%;
     }
     li a {
         display: block;
@@ -48,13 +51,6 @@ const base = import.meta.env.BASE_URL;
     .date {
         margin: 0;
         color: rgb(var(--gray));
-    }
-    li a:hover h4,
-    li a:hover .date {
-        color: rgb(var(--accent));
-    }
-    a:hover img {
-        box-shadow: var(--box-shadow);
     }
     @media (max-width: 720px) {
         li {
