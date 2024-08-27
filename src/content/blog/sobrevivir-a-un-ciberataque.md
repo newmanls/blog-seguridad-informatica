@@ -2,7 +2,7 @@
 title: 'Estrategias para sobrevivir a un ciberataque y proteger la integridad de la información'
 description: ''
 author: 'José García'
-pubDate: 'Aug 27 2024'
+pubDate: '2024/08/27'
 heroImage: '/blog-placeholder-4.jpg'
 ---
 

@@ -2,7 +2,7 @@
 title: 'La integridad en internet bajo amenaza, ¿Cómo sobrevivir?'
 description: ''
 author: 'José García'
-pubDate: 'Aug 27 2024'
+pubDate: '2024/08/27'
 heroImage: '/blog-placeholder-4.jpg'
 ---
 

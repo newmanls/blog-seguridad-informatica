@@ -2,8 +2,8 @@
 title: 'Pilares o principios de la seguridad informática'
 description: 'Todo lo que debes saber sobre los pilares de la seguridad informática.'
 author: 'Leonela Ramírez'
-pubDate: 'Aug 27 2024'
-heroImage: '/blog-placeholder-4.jpg'
+pubDate: '2024/08/27'
+heroImage: '/pilares.jpg'
 ---
 
 Los pilares de la seguridad informática son los principios básicos que tienen como objetivo principal la protección de la información en los sistemas informáticos. Los pilares de la seguridad informática son:
