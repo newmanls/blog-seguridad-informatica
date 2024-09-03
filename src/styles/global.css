@@ -17,25 +17,30 @@
         0 16px 32px rgba(var(--gray), 33%);
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     text-align: left;
     background: linear-gradient(var(--gray-gradient)) no-repeat;
     background-size: 100% 600px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
     color: rgb(var(--gray-dark));
     font-size: 16px;
     line-height: 1.7;
 }
 
-main {
-    width: 720px;
+main,
+nav {
+    width: 960px;
     max-width: calc(100% - 2em);
     margin: auto;
-    padding: 3em 1em;
+    padding: 1em;
 }
 
 h1,
