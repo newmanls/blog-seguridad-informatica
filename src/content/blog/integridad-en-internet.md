@@ -3,7 +3,7 @@ title: 'La integridad en internet bajo amenaza, ¿Cómo sobrevivir?'
 description: ''
 author: 'José García'
 pubDate: '2024/08/27'
-heroImage: '/blog-placeholder-4.jpg'
+heroImage: '/blog-placeholder.jpg'
 ---
 
 En la era digital, la integridad en internet se enfrenta a múltiples amenazas que ponen en riesgo la seguridad y la privacidad de los usuarios. Desde ataques cibernéticos hasta la desinformación, es crucial entender estos desafíos y aprender a protegernos. Los hackers utilizan técnicas como el phishing y el malware para robar información personal y financiera, lo que puede tener consecuencias devastadoras. Además, la propagación de noticias falsas puede manipular la opinión pública y causar confusión.
