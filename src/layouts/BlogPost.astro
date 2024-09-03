@@ -21,15 +21,10 @@ const { title, description, author, pubDate, updatedDate, heroImage } = Astro.pr
                 <article>
                     {heroImage && <img class="hero-image" src=`${base}/${heroImage}` alt="" />}
                     <div class="prose">
-                        <div class="title">
+                        <div class="metadata">
                             <div class="date">
                                 <FormattedDate date={pubDate} />
-                                {
-                                updatedDate && (
-                                <div class="last-updated-on">
-                                    Actualizado el <FormattedDate date={updatedDate} />
-                                </div>
-                                )
+                                {updatedDate && (<span class="last-updated-on">Actualizado el <FormattedDate date={updatedDate} /></span>)
                                 }
                             </div>
                             <h1>{title}</h1>
@@ -61,17 +56,17 @@ const { title, description, author, pubDate, updatedDate, heroImage } = Astro.pr
         color: rgb(var(--gray-dark));
         font-size: 1.2rem;
     }
-    .title {
+    .metadata {
         margin: 1em 0;
         padding: 1em 0;
         text-align: center;
         line-height: 1;
         border-bottom: 1px solid rgb(var(--gray-light));
     }
-    .title > *:last-child {
+    .metadata > *:last-child {
         margin-bottom: 0;
     }
-    .title h1 {
+    .metadata h1 {
         margin: 0 0 0.5em 0;
     }
     .date {
