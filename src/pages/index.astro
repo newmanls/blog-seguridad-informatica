@@ -12,8 +12,6 @@ const posts = (await getCollection('blog')).sort(
 (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 ).slice(0, 3);
 const featuredPost = await getEntry('blog', 'pilares-de-la-seguridad-informatica')
-
-console.log(featuredPost);
 ---
 
 <!doctype html>
