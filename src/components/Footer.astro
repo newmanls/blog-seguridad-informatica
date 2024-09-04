@@ -2,28 +2,20 @@
 import { SITE_TITLE } from '../consts';
 ---
 
-<footer>
-    <p>El sitio <strong>{SITE_TITLE}</strong> es una actividad correspondiente a la cátedra "Electiva IV" de la UNEXCA.</p>
-    <p>Hecho con <a href="https://astro.build/" target="_blank">Astro</a>. Código fuente disponible en <a href="https://github.com/newmanls/">GitHub</a>.</p>
+<footer class="bg-glass">
+    <div class="container">
+        <p>El sitio <b>{SITE_TITLE}</b> es una actividad correspondiente a la cátedra "Electiva IV" de la UNEXCA.</p>
+        <p>Hecho con <a href="https://astro.build/" target="_blank">Astro</a>. Código fuente disponible en <a href="https://github.com/newmanls/">GitHub</a>.</p>
+    </div>
 </footer>
 
 <style>
     footer {
-        padding: 2em 1em 6em 1em;
-        background: linear-gradient(var(--gray-gradient)) no-repeat;
-        color: rgb(var(--gray));
+        display: block;
         text-align: center;
-    }
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-    }
-    .social-links a {
-        text-decoration: none;
-        color: rgb(var(--gray));
-    }
-    .social-links a:hover {
-        color: rgb(var(--gray-dark));
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        padding: 2rem 0;
     }
 </style>

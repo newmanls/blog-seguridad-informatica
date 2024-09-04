@@ -1,14 +1,19 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import PostCardLi from '../components/PostCardLi.astro'
+import FormattedDate from '../components/FormattedDate.astro'
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 
+const base = import.meta.env.BASE_URL;
 const posts = (await getCollection('blog')).sort(
 (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+).slice(0, 3);
+const featuredPost = await getEntry('blog', 'pilares-de-la-seguridad-informatica')
+
+console.log(featuredPost);
 ---
 
 <!doctype html>
@@ -19,21 +24,85 @@ const posts = (await getCollection('blog')).sort(
     <body>
         <Header />
             <main>
-                <section>
+                <section class="featured-post">
+                    <img class="bg-glass" src=`${base}/${featuredPost.data.heroImage}` alt="">
+                    <div class="container">
+                        <p class="label">Post destacado</p>
+                        <p class="date"><FormattedDate date={featuredPost.data.pubDate} /></p>
+                        <h1 class="title">{featuredPost.data.title}</h1>
+                        <p class="description">{featuredPost.data.description}</p>
+                        <p class="author">Por {featuredPost.data.author}</p>
+                        <a class="btn btn-primary" href=`${base}/blog/${featuredPost.slug}`>Conoce más</a>
+                    </div>
+                </section>
+                <section class="latest-posts">
+                    <h1>Últimos posts</h1>
                     <ul>
                         {posts.map((post) => <PostCardLi {post}/>)}
                     </ul>
+                    <a class="btn btn-primary" href=`${base}/blog`>Ver más</a>
                 </section>
             </main>
-            <Footer />
+        <Footer />
     </body>
 </html>
 
 <style>
+    section {
+        margin: 2rem 0;
+    }
+    .featured-post {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 3rem;
+    }
+    .featured-post > img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        padding: 1rem;
+    }
+    .featured-post .container {
+        padding: 0;
+    }
+    .featured-post .container > * {
+        margin: 0 0 1rem 0;
+    }
+    .featured-post .label {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+    .featured-post .title {
+        color: var(--white);
+        line-height: 1;
+        font-size: 2rem
+    }
+    .featured-post .date,
+    .featured-post .author {
+        color: rgb(var(--gray));
+        font-size: 0.9rem;
+    }
+    .latest-posts {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    h1 {
+        display: inline-block;
+    }
     ul {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
         list-style-type: none;
+    }
+    @media (max-width: 720px) {
+        .featured-post {
+            grid-template-columns: 100%;
+            gap: 1rem;
+        }
+        .featured-post > img {
+            aspect-ratio: 16/10;
+        }
     }
 </style>
