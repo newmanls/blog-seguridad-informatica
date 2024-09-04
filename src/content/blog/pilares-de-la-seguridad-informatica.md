@@ -113,6 +113,8 @@ Garantizar que el uso de la tecnología se realice de manera ética, responsable
 - Adaptabilidad: Las leyes y regulaciones evolucionan, por lo que las organizaciones deben mantenerse actualizadas.
 - Globalización: Las empresas que operan a nivel internacional deben cumplir con las leyes de múltiples jurisdicciones.
 
+![Triada de la seguridad informática](/infografia-triada-seguridad-informatica.jpg)
+
 # Conclusión
 
 La seguridad informática se erige sobre tres pilares fundamentales: confidencialidad, integridad y disponibilidad. Estos pilares, al igual que las columnas de un edificio, proporcionan la base sólida sobre la cual se construyen los sistemas de información seguros. Garantizar estos pilares es esencial para proteger los activos digitales de las organizaciones y los individuos, mitigando riesgos como la pérdida de datos, el fraude y los ataques cibernéticos. En un mundo cada vez más digitalizado, donde la información es un activo invaluable, la seguridad informática se ha convertido en una prioridad estratégica. La seguridad informática, sustentada en los pilares de confidencialidad, integridad y disponibilidad, es un aspecto crítico en el mundo digital actual. Si bien estos pilares proporcionan una base sólida, la seguridad es un desafío en constante evolución
