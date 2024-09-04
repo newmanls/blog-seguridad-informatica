@@ -6,65 +6,9 @@ pubDate: '2024/08/27'
 heroImage: '/pilares.jpg'
 ---
 
-Los pilares de la seguridad informática son los principios básicos que tienen como objetivo principal la protección de la información en los sistemas informáticos. Los pilares de la seguridad informática son:
+# Pilares Principales
 
-1. Confidencialidad
-2. Integridad
-3. Disponibilidad
-
-# Confidencialidad
-
-La confidencialidad se refiere a la protección de la información contra el acceso no autorizado.
-
-## Objetivo
-
-Garantizar que solo las personas autorizadas puedan acceder a la información.
-
-## Características
-
-- Protección contra acceso no autorizado.
-- Cumplimiento normativo.
-- Privacidad de la información.
-
-## Actividades Principales
-
-Protección de la información de accesos no autorizados, Ejemplos: encriptación de datos, control de acceso, políticas de contraseñas
-
-# Integridad
-
-La integridad se refiere a la precisión y completitud de la información.
-
-## Objetivo
-
-Garantizar que la información no se modifique de manera no autorizada.
-
-## Características
-
-- Fiabilidad y totalidad de los datos.
-- Prevenir modificaciones no autorizadas.
-- Confiabilidad de la información
-
-## Actividades Principales
-
-Mantenimiento de la exactitud y completitud de la información. Ejemplos: detección de intrusiones, copias de seguridad, verificación de datos.
-
-# Disponibilidad
-
-La disponibilidad se refiere a la accesibilidad de la información y los sistemas cuando se necesitan.
-
-## Objetivo
-
-Garantizar que la información y los recursos informáticos estén disponibles para los usuarios autorizados.
-
-## Características
-
-- Acceso a la información y los sistemas.
-- Continuidad del negocio.
-- Rendimiento y fiabilidad.
-
-## Actividades Principales
-
-Garantía de acceso a la información cuando se necesita. Ejemplos: redundancia de sistemas, planes de recuperación de desastres, mantenimiento preventivo.
+![Triada de la seguridad informática](/infografia-triada-seguridad-informatica.jpg)
 
 # Pilares auxiliares de la seguridad informática
 
@@ -112,8 +56,6 @@ Garantizar que el uso de la tecnología se realice de manera ética, responsable
 
 - Adaptabilidad: Las leyes y regulaciones evolucionan, por lo que las organizaciones deben mantenerse actualizadas.
 - Globalización: Las empresas que operan a nivel internacional deben cumplir con las leyes de múltiples jurisdicciones.
-
-![Triada de la seguridad informática](/infografia-triada-seguridad-informatica.jpg)
 
 # Conclusión
 
