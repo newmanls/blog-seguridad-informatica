@@ -3,7 +3,7 @@ title: 'Estrategias para sobrevivir a un ciberataque y proteger la integridad de
 description: ''
 author: 'José García'
 pubDate: '2024/08/27'
-heroImage: '/blog-placeholder.jpg'
+heroImage: '/seguridad-4.jpg'
 ---
 
 Para sobrevivir en este entorno digital hostil, es fundamental mantenerse informado sobre las últimas amenazas y aprender a reconocer señales de peligro. Utilizar herramientas de seguridad como software antivirus y firewalls puede ayudar a proteger tus dispositivos contra malware y otros ataques. Crear contraseñas fuertes y únicas para cada cuenta es otra medida esencial para proteger tu información personal.
